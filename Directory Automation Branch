@@ -1,0 +1,7 @@
+The intent of this branch is to add a feature that allows for a user to automatically generate a directory to drop files into (let's say we call this directory "Dirty"), run mat2 on all files in the directory and then have the files deposited into a new directory (let's call this directory "Clean") when scrubbed or yet another directory ("Error") if metadata could not be scrubbed.
+The flow should look something like this:
+1.) Automatically create a "Dirty" directory to place unscrubbed files into using drag and drop (or other gui based, non terminal methods).
+2.) Automatically create a "Clean" directory that the program automatically deposits scrubbed files into.
+  2.1)Write script that automatically moves scrubbed files into aforementioned "Clean" directory.
+3.) Automatically create an "Error" directory that the program automatically deposits unsupported files into.
+  3.1) Write a script that automatically moves files into aforementioned "Error" directory and continues the loop without causing an error code.
